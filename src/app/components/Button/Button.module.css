@@ -1,9 +1,22 @@
 .button {
-  color: #000;
-  background: linear-gradient(180deg, #ffbb3b, #ffa90a);
-  font-size: 0.8em;
-  padding: 0.8em 2em;
-  border: none;
-  border-radius: 0.4em;
-  text-transform: uppercase;
+  color: var(--text-color);
+  border: 1px solid var(--stroke-color);
+  background-color: var(--button-ia);
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  transition: all 0.75s;
+}
+
+.button:hover {
+  padding: 0.6rem 1.5rem;
+  text-shadow: 1px 1px 8px var(--orokin);
+  border-color: var(--orokin);
+  transition: all 0.75s;
+}
+
+.active {
+  border-color: var(--stroke-color);
+  background: var(--button-a);
+  color: var(--orokin);
 }
