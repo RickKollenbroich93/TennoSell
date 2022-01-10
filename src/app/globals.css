@@ -11,6 +11,7 @@
 }
 
 :root {
+  --bg-main: #304c52;
   --bg-card: #5d787f;
   --text-color: #fff;
   --orokin: #ffe792;
