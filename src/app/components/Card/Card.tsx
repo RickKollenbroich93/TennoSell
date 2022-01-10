@@ -4,8 +4,8 @@ type CardProps = {
   className?: string;
   item: string;
   itemImg?: string;
-  itemSell?: Number;
-  itemBuy?: Number;
+  itemSell?: number;
+  itemBuy?: number;
 };
 
 function Card({
