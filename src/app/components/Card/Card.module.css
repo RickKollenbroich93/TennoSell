@@ -1,0 +1,24 @@
+.cardcontainer {
+  display: grid;
+  width: 20rem;
+  text-align: center;
+  color: var(--text-color);
+  border: 1px solid var(--button-a);
+  background-color: var(--bg-card);
+  padding-bottom: 1rem;
+  border-radius: 25px;
+}
+
+.itemwrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.imgcontainer {
+  height: 5rem;
+  width: 5rem;
+}
+
+.cardheader {
+  text-decoration: underline var(--orokin);
+}

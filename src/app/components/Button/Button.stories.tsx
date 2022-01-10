@@ -1,3 +1,4 @@
+import HomeIcon from '../assets/HomeIcon';
 import Button from './Button';
 
 export default {
@@ -5,5 +6,10 @@ export default {
   component: Button,
 };
 
-export const Login = (): JSX.Element => <Button>Login</Button>;
-export const Register = (): JSX.Element => <Button>Register</Button>;
+export const Mods = (): JSX.Element => <Button active>Mods</Button>;
+export const PrimeParts = (): JSX.Element => <Button>Prime Parts</Button>;
+export const Home = (): JSX.Element => (
+  <Button>
+    <HomeIcon />
+  </Button>
+);
