@@ -10,6 +10,7 @@
   background-position: top;
   color: var(--text-color);
   text-align: center;
+  padding: 1rem;
 }
 
 .navcontainer {
@@ -24,4 +25,11 @@
 
 .img {
   position: absolute;
+}
+
+.cardcontainer {
+  display: grid;
+  overflow: scroll;
+  gap: 1em;
+  justify-content: center;
 }
