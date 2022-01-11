@@ -17,7 +17,7 @@
 }
 
 .container {
-  background-color: transparent;
+  background: #4e4c4c91;
   display: flex;
   align-items: center;
   border: solid 2px var(--stroke-color);
