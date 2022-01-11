@@ -6,26 +6,26 @@ import Button from './components/Button/Button';
 import Searchbar from './components/Searchbar/Searchbar';
 import Card from './components/Card/Card';
 
-const mockCard = [
-  {
-    item: 'Mirage',
-    itemImg: 'URL',
-    itemSell: 2,
-    itemBuy: 12,
-  },
-  {
-    item: 'Mirage',
-    itemImg: 'URL',
-    itemSell: 2,
-    itemBuy: 12,
-  },
-  {
-    item: 'Mirage',
-    itemImg: 'URL',
-    itemSell: 2,
-    itemBuy: 12,
-  },
-];
+// const mockCard = [
+//   {
+//     item: 'Mirage',
+//     itemImg: 'URL',
+//     itemSell: 2,
+//     itemBuy: 12,
+//   },
+//   {
+//     item: 'Mirage',
+//     itemImg: 'URL',
+//     itemSell: 2,
+//     itemBuy: 12,
+//   },
+//   {
+//     item: 'Mirage',
+//     itemImg: 'URL',
+//     itemSell: 2,
+//     itemBuy: 12,
+//   },
+// ];
 
 function App(): JSX.Element {
   const [searchValue, setSearchValue] = useState<string>('');
