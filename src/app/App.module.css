@@ -1,6 +1,7 @@
 .appcontainer {
   height: 100vh;
   display: grid;
+  grid-template-rows: 4em 3em 1fr;
   background-color: var(--bg-main);
   background-image: url('src/app/components/assets/Background.svg');
   background-repeat: no-repeat;
@@ -8,6 +9,16 @@
   background-position: top;
   color: var(--text-color);
   text-align: center;
+}
+
+.navcontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttoncontainer {
+  width: 120px;
 }
 
 .img {
