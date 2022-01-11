@@ -1,32 +1,37 @@
 import styles from './App.module.css';
 import { useState } from 'react';
+import useItem from './hooks/useItem';
 import HomeIcon from './components/assets/HomeIcon';
 import Button from './components/Button/Button';
 import Searchbar from './components/Searchbar/Searchbar';
 import Card from './components/Card/Card';
 
+const mockCard = [
+  {
+    item: 'Mirage',
+    itemImg: 'URL',
+    itemSell: 2,
+    itemBuy: 12,
+  },
+  {
+    item: 'Mirage',
+    itemImg: 'URL',
+    itemSell: 2,
+    itemBuy: 12,
+  },
+  {
+    item: 'Mirage',
+    itemImg: 'URL',
+    itemSell: 2,
+    itemBuy: 12,
+  },
+];
+
 function App(): JSX.Element {
   const [searchValue, setSearchValue] = useState<string>('');
-  const mockCard = [
-    {
-      item: 'Mirage',
-      itemImg: 'URL',
-      itemSell: 2,
-      itemBuy: 12,
-    },
-    {
-      item: 'Mirage',
-      itemImg: 'URL',
-      itemSell: 2,
-      itemBuy: 12,
-    },
-    {
-      item: 'Mirage',
-      itemImg: 'URL',
-      itemSell: 2,
-      itemBuy: 12,
-    },
-  ];
+
+  const { items } = useItem();
+
   return (
     <div className={styles.appcontainer}>
       <h1>Tenno Sell</h1>
@@ -50,14 +55,15 @@ function App(): JSX.Element {
       </nav>
       <h2>Top Items</h2>
       <div className={styles.cardcontainer}>
-        {mockCard.map((card) => (
-          <Card
-            item={card.item}
-            itemImg={card.itemImg}
-            itemBuy={card.itemBuy}
-            itemSell={card.itemSell}
-          />
-        ))}
+        {items &&
+          items.map((card) => (
+            <Card
+              item={card.item}
+              itemImg={card.itemImg}
+              // itemBuy={card.itemBuy}
+              // itemSell={card.itemSell}
+            />
+          ))}
       </div>
     </div>
   );
