@@ -1,18 +1,14 @@
-import type { Card } from '../../types';
+import type { Cards } from '../../types';
 import useFetch from './useFetch';
 
 export default function useItem(name?: string): {
-  items: Card[] | null;
-  errorMessage: string | null;
-  isLoading: boolean;
+  items: Cards[] | null;
 } {
-  const result = useFetch<Card[]>(
+  const result = useFetch<Cards[]>(
     `https://api.magicthegathering.io/v1/cards/?name=${name ? name : ''}`
   );
 
   return {
     items: result.data,
-    errorMessage: result.errorMessage,
-    isLoading: result.isLoading,
   };
 }

@@ -1,4 +1,4 @@
-export type Card = {
+export type Cards = {
   item: string;
   itemImg: string;
   //   itemSell: number;

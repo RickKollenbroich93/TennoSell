@@ -1,6 +1,8 @@
 import styles from './App.module.css';
 import { useState } from 'react';
 import useItem from './hooks/useItem';
+import useFetch from './hooks/useFetch';
+import type { allCard } from '../types';
 import HomeIcon from './components/assets/HomeIcon';
 import Button from './components/Button/Button';
 import Searchbar from './components/Searchbar/Searchbar';
@@ -30,7 +32,20 @@ import Card from './components/Card/Card';
 function App(): JSX.Element {
   const [searchValue, setSearchValue] = useState<string>('');
 
-  const { items } = useItem();
+  const { items } = useItem(searchValue);
+
+  // const result = useFetch<allCard[]>(
+  //   `https://api.magicthegathering.io/v1/cards/?name=${
+  //     searchValue ? searchValue : ''
+  //   }`
+  // );
+
+  const allcards = items?.map((item) => {
+    return {
+      item: item.item,
+      itemImg: item.itemImg,
+    };
+  });
 
   return (
     <div className={styles.appcontainer}>
@@ -55,8 +70,8 @@ function App(): JSX.Element {
       </nav>
       <h2>Top Items</h2>
       <div className={styles.cardcontainer}>
-        {items &&
-          items.map((card) => (
+        {allcards &&
+          allcards.map((card) => (
             <Card
               item={card.item}
               itemImg={card.itemImg}
