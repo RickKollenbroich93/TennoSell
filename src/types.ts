@@ -1,9 +1,13 @@
 export type Cards = {
-  item: string;
-  itemImg: string;
-  //   itemSell: number;
-  //   itemBuy: number;
+  item: string; //cardName
+  imageUrl: string; //Imglink
+  cmc: number; //ManaCosts
+  color: string[]; //ColorOfCard
+  rarity: string;
+  set: string;
+  originalType: string;
 };
+
 export type allCard = {
   cards: [
     {
